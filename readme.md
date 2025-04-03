@@ -16,6 +16,15 @@ This webpage was developed for the Milestone 2, where I have developed a memory 
 
 ## User stories
 
+### As a player ...
+
+- ... I want to keep track of my turns.
+- ... I want to keep track of how many correct matches I have.
+- ... I want to be able to restart the game.
+- ... I want a reward for completing the game.
+- ... I want to be able to choose with how many cards to play.
+- ... I want to keep a record of my scores to compare with past ones.
+
 [Back to the top](#table-of-contents)
 
 ## Wireframes
