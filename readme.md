@@ -29,6 +29,15 @@ This webpage was developed for the Milestone 2, where I have developed a memory 
 
 ## Wireframes
 
+### Mobile
+![Mobile wireframes](/assets/readme/wireframes/mobile.png)
+
+### Tablet
+![Tablet wireframes](/assets/readme/wireframes/tablet.png)
+
+### Desktop
+![Desktop wireframes](/assets/readme/wireframes/desktop.png)
+
 [Back to the top](#table-of-contents)
 
 ## Features
