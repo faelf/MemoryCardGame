@@ -30,13 +30,13 @@ This webpage was developed for the Milestone 2, where I have developed a memory 
 ## Wireframes
 
 ### Mobile
-![Mobile wireframes](/assets/readme/wireframes/mobile.png)
+![Mobile wireframes](/assets/readme/wireframes/Mobile.png)
 
 ### Tablet
-![Tablet wireframes](/assets/readme/wireframes/tablet.png)
+![Tablet wireframes](/assets/readme/wireframes/Tablet.png)
 
 ### Desktop
-![Desktop wireframes](/assets/readme/wireframes/desktop.png)
+![Desktop wireframes](/assets/readme/wireframes/Desktop.png)
 
 [Back to the top](#table-of-contents)
 
