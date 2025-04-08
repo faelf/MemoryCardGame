@@ -1,0 +1,46 @@
+{
+  "name": "Zelda Memory Card Game",
+  "short_name": "Card Game",
+  "description": "A memory card game with Zelda cards",
+  "icons": [
+    {
+      "src": "/assets/favicon/web-app-manifest-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/favicon/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/favicon/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+     "src": "/assets/favicon/narrow.png",
+      "sizes": "485x1080",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile"
+    },
+    {
+      "src": "/assets/favicon/wide.png",
+       "sizes": "1920x1080",
+       "type": "image/png",
+       "form_factor": "wide",
+       "label": "Desktop"
+     }
+  ],
+  "start_url": "/index.html",
+  "theme_color": "#344E41",
+  "background_color": "#344E41",
+  "display": "standalone",
+  "orientation": "portrait"
+}
