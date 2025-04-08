@@ -56,6 +56,9 @@ This webpage was developed for the Milestone 2, where I have developed a memory 
 
 ### Frameworks, libraries, & programes used
 
+Favicons - [realfavicongenerator](https://realfavicongenerator.net/)
+
+
 [Back to the top](#table-of-contents)
 
 ## Deployment
@@ -67,5 +70,8 @@ This webpage was developed for the Milestone 2, where I have developed a memory 
 [Back to the top](#table-of-contents)
 
 ## Credits
+
+Favicon Image - https://www.svgrepo.com/svg/236400/game-console-gamer
+
 
 [Back to the top](#table-of-contents)
