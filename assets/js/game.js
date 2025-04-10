@@ -66,4 +66,23 @@ function generateCards () {
   }
 }
 
-generateCards();
+/*
+* Starts a new game resetting game stats and generating new cards
+*/
+function newGame () {
+  // Clear the HTML
+  gameBoard.innerHTML = "";
+  // Clear turns
+  gameStats.turns = 0;
+  turnsCount.textContent = gameStats.turns;
+  // Clear Points
+  gameStats.points = 0;
+  pointsCount.textContent = gameStats.points;
+  // Generate new cards
+  generateCards();
+};
+
+/*
+* Run the newGame function when the page is loaded
+*/
+document.addEventListener("DOMContentLoaded", newGame);
