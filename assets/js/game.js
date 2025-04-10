@@ -48,6 +48,9 @@ function shuffleCards () {
 // let cards = shuffleCards();
 // console.log(cards);
 
+/*
+* Generates the HTML for the cards
+*/
 function generateCards () {
   // Store the shuffled cards into a const
   const cards = shuffleCards();
@@ -57,12 +60,22 @@ function generateCards () {
     // console.log(cards[i]);
     // Generate the HTML tag for individual card
     const card = document.createElement("div");
-    const face = document.createElement("img");
+    const cardFrontImg = document.createElement("img");
+    const cardBack = document.createElement("div");
     // Attach the img src to the card
-    face.src = cards[i].imgSrc;
+    cardFrontImg.src = cards[i].imgSrc;
     // Attach the cards to Game Board
     gameBoard.appendChild(card);
-    card.appendChild(face);
+    card.appendChild(cardFrontImg);
+    card.appendChild(cardBack);
+    // Adding Classes
+    card.classList.add('card');
+    cardFrontImg.classList.add('front');
+    cardBack.classList.add('back');
+    // Add Click Event on the card
+    card.addEventListener('click', () => {
+      card.classList.toggle('flip');
+    });
   }
 }
 
