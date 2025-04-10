@@ -36,3 +36,14 @@ const cardFiles = [
 ];
 
 // console.log(cardFiles);
+
+/*
+* Shuffle the cards
+*/
+function shuffleCards () {
+  const shuffledCards = cardFiles.sort(() => Math.random() - 0.5);
+  return shuffledCards;
+};
+
+// let cards = shuffleCards();
+// console.log(cards);
