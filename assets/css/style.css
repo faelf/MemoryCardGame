@@ -3,8 +3,10 @@
 :root {
   /* Colours */
   --color1: hsl(150, 20%, 25%);
+  --color1-hover: hsl(150, 20%, 35%);
   --color2: hsl(131, 22%, 29%);
   --color3: hsl(47, 15%, 88%);
+  --color3-hover: hsl(47, 15%, 78%);
   /* Fonts */
   --FontHeadings: "Overlock SC", sans-serif;
   --FontScores: "Silkscreen", sans-serif;
@@ -27,4 +29,57 @@ header h1 {
   font-family: var(--FontHeadings);
   color: var(--color3);
   text-align: center;
+}
+
+/* Game Stats Section */
+#gameStats {
+  /* Colours for Game Stats Display */
+  --background-color: hsl(0, 0%, 15%);
+  --text-color: hsl(129, 96%, 56%);
+  /* Border Properties */
+  --border-color: var(--color1);
+  --boder-size: 2px;
+  --border-radius: 9px;
+}
+
+#gameStats {
+  display: flex;
+  justify-content: center;
+  margin: 5px auto;
+  width: 250px;
+}
+
+#gameStats p {
+  font-family: var(--FontScores);
+  text-align: center;
+  padding: 5px 0;
+  border-top: var(--boder-size) solid var(--border-color);
+  border-bottom: var(--boder-size) solid var(--border-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+#gameStats p:first-child {
+  border-top: var(--boder-size) solid var(--border-color);
+  border-left: var(--boder-size) solid var(--border-color);
+  border-bottom: var(--boder-size) solid var(--border-color);
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+#gameStats p:last-child {
+  border: var(--boder-size) solid var(--border-color);
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+#gameStats .newGameBtn {
+  background-color: var(--color1);
+  color: var(--color3);
+  cursor: pointer;
+}
+
+#gameStats .newGameBtn:hover {
+  background-color: var(--color1-hover);
+  color: var(--color3-hover);
 }
