@@ -83,3 +83,16 @@ header h1 {
   background-color: var(--color1-hover);
   color: var(--color3-hover);
 }
+
+/* Game Board */
+#gameBoard {
+  margin: 0 auto;
+  padding: 0 10px;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#gameBoard img {
+  width: 100%;
+}
