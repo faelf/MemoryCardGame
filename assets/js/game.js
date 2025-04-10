@@ -47,3 +47,23 @@ function shuffleCards () {
 
 // let cards = shuffleCards();
 // console.log(cards);
+
+function generateCards () {
+  // Store the shuffled cards into a const
+  const cards = shuffleCards();
+  // console.log(cards);
+  // Loop through the cards to generate each card HTML
+  for (let i = 0; i < cards.length; i++) {
+    // console.log(cards[i]);
+    // Generate the HTML tag for individual card
+    const card = document.createElement("div");
+    const face = document.createElement("img");
+    // Attach the img src to the card
+    face.src = cards[i].imgSrc;
+    // Attach the cards to Game Board
+    gameBoard.appendChild(card);
+    card.appendChild(face);
+  }
+}
+
+generateCards();
