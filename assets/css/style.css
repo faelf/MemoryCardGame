@@ -15,3 +15,16 @@
   margin: 0;
   padding: 0;
 }
+
+/* Header */
+header {
+  background-color: var(--color1);
+  padding: 15px;
+  border-bottom: 5px solid var(--color2);
+}
+
+header h1 {
+  font-family: var(--FontHeadings);
+  color: var(--color3);
+  text-align: center;
+}
