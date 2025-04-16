@@ -7,17 +7,11 @@ const gameBoard = document.getElementById('gameBoard');
 const turnsCount = document.getElementById('turns');
 const pointsCount = document.getElementById('points');
 
-// console.log(gameBoard);
-// console.log(turnsCount);
-// console.log(pointsCount);
-
 // Game Stats
 let gameStats = {
   turns: 0,
   points: 0,
 };
-
-// console.log(gameStats);
 
 // Storing the cards
 const cardFiles = [
@@ -35,8 +29,6 @@ const cardFiles = [
   { id: 12, imgSrc: "assets/images/zelda6.webp", name: "card6" },
 ];
 
-// console.log(cardFiles);
-
 /*
 * Shuffle the cards
 */
@@ -45,19 +37,14 @@ function shuffleCards () {
   return shuffledCards;
 };
 
-// let cards = shuffleCards();
-// console.log(cards);
-
 /*
 * Generates the HTML for the cards
 */
 function generateCards () {
   // Store the shuffled cards into a const
   const cards = shuffleCards();
-  // console.log(cards);
   // Loop through the cards to generate each card HTML
   for (let i = 0; i < cards.length; i++) {
-    // console.log(cards[i]);
     // Generate the HTML tag for individual card
     const card = document.createElement("div");
     const cardFrontImg = document.createElement("img");
@@ -104,7 +91,6 @@ function newGame () {
 function clickedCards (e) {
   // Storing the clicked card
   const clickedCard = e.target;
-  // console.log(clickedCard);
   // Adding flipped class to the clicked cards
   clickedCard.classList.add("flipped")
   checkCards();
@@ -116,15 +102,12 @@ function clickedCards (e) {
 function checkCards () {
   // Storing the flipped cards
   const flippedCards = document.querySelectorAll('.flipped');
-  // console.log(flippedCards);
+
   if (flippedCards.length === 2) {
     const flippedCard1 = flippedCards[0].getAttribute('data-name');
     const flippedCard2 = flippedCards[1].getAttribute('data-name');
-    // console.log(flippedCard1);
-    // console.log(flippedCard2);
     // If the cards match
     if (flippedCard1 === flippedCard2) {
-      // console.log('Match')
       flippedCards.forEach(matchedCard);
 
       function matchedCard (matched) {
@@ -135,7 +118,6 @@ function checkCards () {
       addTurns();
     // If the cards do not match
     } else {
-      // console.log('Do not match');
       flippedCards.forEach(notMatchedCard);
 
       function notMatchedCard (unmatched) {
