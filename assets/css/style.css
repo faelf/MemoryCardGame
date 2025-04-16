@@ -143,3 +143,15 @@ header h1 {
 .matched {
   pointer-events: none;
 }
+
+/* Devices 400px and larger */
+@media (min-width: 400px) {
+  #gameStats {
+    width: 90%;
+  }
+
+  #gameStats p {
+    padding: 10px;
+    flex: 1;
+  }
+}
