@@ -139,3 +139,7 @@ header h1 {
 .flipped {
   pointer-events: none;
 }
+
+.matched {
+  pointer-events: none;
+}

@@ -64,6 +64,8 @@ function generateCards () {
     const cardBack = document.createElement("div");
     // Attach the img src to the card
     cardFrontImg.src = cards[i].imgSrc;
+    // Add the name of the card
+    card.setAttribute('data-name', cards[i].name);
     // Attach the cards to Game Board
     gameBoard.appendChild(card);
     card.appendChild(cardFrontImg);
@@ -102,9 +104,44 @@ function newGame () {
 function clickedCards (e) {
   // Storing the clicked card
   const clickedCard = e.target;
-  console.log(clickedCard);
+  // console.log(clickedCard);
   // Adding flipped class to the clicked cards
   clickedCard.classList.add("flipped")
+  checkCards();
+};
+
+/*
+* Check if the flipped cards match
+*/
+function checkCards () {
+  // Storing the flipped cards
+  const flippedCards = document.querySelectorAll('.flipped');
+  // console.log(flippedCards);
+  if (flippedCards.length === 2) {
+    const flippedCard1 = flippedCards[0].getAttribute('data-name');
+    const flippedCard2 = flippedCards[1].getAttribute('data-name');
+    // console.log(flippedCard1);
+    // console.log(flippedCard2);
+    // If the cards match
+    if (flippedCard1 === flippedCard2) {
+      // console.log('Match')
+      flippedCards.forEach(matchedCard);
+
+      function matchedCard (matched) {
+        matched.classList.remove('flipped');
+        matched.classList.add('matched');
+      };
+    // If the cards do not match
+    } else {
+      // console.log('Do not match');
+      flippedCards.forEach(notMatchedCard);
+
+      function notMatchedCard (unmatched) {
+        unmatched.classList.remove('flipped');
+        setTimeout(() => unmatched.classList.remove('flip'), 700);
+      };
+    }
+  }
 };
 
 /*
