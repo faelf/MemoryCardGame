@@ -131,6 +131,8 @@ function checkCards () {
         matched.classList.remove('flipped');
         matched.classList.add('matched');
       };
+      addPoints();
+      addTurns();
     // If the cards do not match
     } else {
       // console.log('Do not match');
@@ -140,8 +142,25 @@ function checkCards () {
         unmatched.classList.remove('flipped');
         setTimeout(() => unmatched.classList.remove('flip'), 700);
       };
+      addTurns();
     }
   }
+};
+
+/*
+* Add points to game stats and updates display
+*/
+function addPoints () {
+  gameStats.points++;
+  pointsCount.textContent = gameStats.points;
+};
+
+/*
+* Add turns to game stats and updates display
+*/
+function addTurns () {
+  gameStats.turns++;
+  turnsCount.textContent = gameStats.turns;
 };
 
 /*
