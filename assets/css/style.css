@@ -116,6 +116,8 @@ header h1 {
   height: 100%;
   width: 100%;
   border-radius: 15px;
+  /* To make sure that the clicked card cannot be clicked twice */
+  pointer-events: none;
 }
 
 .back {
@@ -132,4 +134,8 @@ header h1 {
 /* Cards annimation */
 .flip {
   transform: rotateY(180deg);
+}
+
+.flipped {
+  pointer-events: none;
 }

@@ -73,8 +73,9 @@ function generateCards () {
     cardFrontImg.classList.add('front');
     cardBack.classList.add('back');
     // Add Click Event on the card
-    card.addEventListener('click', () => {
+    card.addEventListener('click', (e) => {
       card.classList.toggle('flip');
+      clickedCards(e);
     });
   }
 }
@@ -93,6 +94,17 @@ function newGame () {
   pointsCount.textContent = gameStats.points;
   // Generate new cards
   generateCards();
+};
+
+/*
+* Mark the clicked cards as flipped
+*/
+function clickedCards (e) {
+  // Storing the clicked card
+  const clickedCard = e.target;
+  console.log(clickedCard);
+  // Adding flipped class to the clicked cards
+  clickedCard.classList.add("flipped")
 };
 
 /*
