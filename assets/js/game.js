@@ -116,6 +116,7 @@ function checkCards () {
       };
       addPoints();
       addTurns();
+      win();
     // If the cards do not match
     } else {
       flippedCards.forEach(notMatchedCard);
@@ -144,6 +145,16 @@ function addTurns () {
   gameStats.turns++;
   turnsCount.textContent = gameStats.turns;
 };
+
+/*
+* Display Congratulation message when the player completes the game
+*/
+function win () {
+  const matchedCards = document.querySelectorAll('.matched');
+  if (matchedCards.length === 12) {
+    setTimeout(() => gameBoard.innerHTML = `<div class="winMessage"><div class="winMessageText">🎉 Contratulations! 🎊</div></div>`, 700);
+  }
+}
 
 /*
 * Run the newGame function when the page is loaded

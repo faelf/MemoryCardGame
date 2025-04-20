@@ -144,6 +144,21 @@ header h1 {
   pointer-events: none;
 }
 
+/* Win Message */
+.winMessage {
+  grid-column: span 3;
+  height: 300px;
+  font-family: var(--FontText);
+}
+
+.winMessageText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.5rem;
+}
+
 /* Devices 400px and larger */
 @media (min-width: 400px) {
   #gameStats {
