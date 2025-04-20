@@ -70,9 +70,9 @@ function generateCards () {
 }
 
 /*
-* Starts a new game resetting game stats and generating new cards
+* Reset the HTML
 */
-function newGame () {
+function resetGame() {
   // Clear the HTML
   gameBoard.innerHTML = "";
   // Clear turns
@@ -83,6 +83,21 @@ function newGame () {
   pointsCount.textContent = gameStats.points;
   // Generate new cards
   generateCards();
+}
+
+/*
+* Starts a new game
+*/
+function newGame () {
+  const matchedCards = document.getElementsByClassName('matched');
+  if (matchedCards.length > 0) {
+    for (let i = 0; i < matchedCards.length; i++) {
+      matchedCards[i].classList.remove('flip');
+    }
+    setTimeout(resetGame, 2000);
+  } else {
+    resetGame();
+  };
 };
 
 /*
