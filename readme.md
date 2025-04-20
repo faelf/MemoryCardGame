@@ -2,6 +2,8 @@
 
 This webpage was developed for the Milestone 2, where I have developed a memory card game based on the Zelda game franchise. The page was made to create a fun and simple experience for the player. The game has a scoring system and turn counter for competitiveness. The webpage was developed with mobile first design, then for larger screens to ensure responsiveness.
 
+![Screenshot](/assets/readme/screenshot.png)
+
 ## Table of contents
 
 1. [User stories](#user-stories)
@@ -66,6 +68,44 @@ Favicons - [realfavicongenerator](https://realfavicongenerator.net/)
 [Back to the top](#table-of-contents)
 
 ## Testing
+
+- [Markup Validation Service](https://validator.w3.org/#validate_by_input)
+
+![HTML](/assets/readme/testing/html.png)
+
+- [CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)
+
+![CSS](/assets/readme/testing/css.png)
+
+- [JavaScript](https://www.jslint.com/)
+
+![JavaScript](/assets/readme/testing/jslint.png)
+![JavaScript](/assets/readme/testing/jslintWarnings2.png)
+![JavaScript](/assets/readme/testing/jslintWarnings3.png)
+![JavaScript](/assets/readme/testing/jslintWarnings4.png)
+
+- [PageSpeed Insights](https://pagespeed.web.dev/)
+
+### Mobile
+
+![Mobile](/assets/readme/testing/pi-mobile.png)
+
+### Desktop
+
+![Desktop](/assets/readme/testing/pi-desktop.png)
+
+I had the same message on both
+
+![Accessibility](/assets/readme/testing/pi-mobile-acc.png)
+
+After adding the alt attributes
+
+![Mobile](/assets/readme/testing/pi-mobile(2).png)
+
+![Desktop](/assets/readme/testing/pi-desktop(2).png)
+
+
+
 
 [Back to the top](#table-of-contents)
 
