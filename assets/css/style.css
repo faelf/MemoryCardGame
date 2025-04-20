@@ -190,3 +190,61 @@ header h1 {
     font-size: 3rem;
   }
 }
+
+/* Devices 1024px and larger */
+@media (min-width: 1024px) {
+  main {
+    width: 1024px;
+    margin: 10px auto;
+    display: flex;
+  }
+
+  #gameStats {
+    width: 256px;
+    height: 250px;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  #gameStats p {
+    border-top: none;
+    border-bottom: none;
+    border-left: var(--boder-size) solid var(--border-color);
+    border-right: var(--boder-size) solid var(--border-color);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+  
+  #gameStats p:first-child {
+    border-top: var(--boder-size) solid var(--border-color);
+    border-left: var(--boder-size) solid var(--border-color);
+    border-right: var(--boder-size) solid var(--border-color);
+    border-bottom: none;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    border-bottom-left-radius: 0px;
+  }
+  
+  #gameStats p:last-child {
+    border: var(--boder-size) solid var(--border-color);
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+  }
+
+  #gameBoard {
+    width: 768px;
+  }
+
+  .winMessage {
+    grid-column: span 4;
+  }
+
+  .winMessageText {
+    font-size: 3rem;
+  }
+}
