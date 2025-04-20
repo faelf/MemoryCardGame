@@ -18,6 +18,12 @@
   padding: 0;
 }
 
+body {
+  display: flex;
+  min-height: 100svh;
+  flex-direction: column;
+}
+
 /* Header */
 header {
   background-color: var(--color1);
@@ -157,6 +163,17 @@ header h1 {
   justify-content: center;
   height: 100%;
   font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  background-color: var(--color1);
+  padding: 15px;
+  border-top: 5px solid var(--color2);
+  font-family: var(--FontText);
+  color: var(--color3);
+  text-align: center;
 }
 
 /* Devices 400px and larger */
