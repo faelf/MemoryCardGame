@@ -3,14 +3,14 @@
 */
 
 // Getting HTML info
-const gameBoard = document.getElementById('gameBoard');
-const turnsCount = document.getElementById('turns');
-const pointsCount = document.getElementById('points');
+const gameBoard = document.getElementById("gameBoard");
+const turnsCount = document.getElementById("turns");
+const pointsCount = document.getElementById("points");
 
 // Game Stats
 let gameStats = {
-  turns: 0,
   points: 0,
+  turns: 0
 };
 
 // Storing the cards
@@ -26,7 +26,7 @@ const cardFiles = [
   { id: 9,  imgSrc: "assets/images/zelda3.webp", name: "card3" },
   { id: 10, imgSrc: "assets/images/zelda4.webp", name: "card4" },
   { id: 11, imgSrc: "assets/images/zelda5.webp", name: "card5" },
-  { id: 12, imgSrc: "assets/images/zelda6.webp", name: "card6" },
+  { id: 12, imgSrc: "assets/images/zelda6.webp", name: "card6" }
 ];
 
 /*
@@ -35,7 +35,7 @@ const cardFiles = [
 function shuffleCards () {
   const shuffledCards = cardFiles.sort(() => Math.random() - 0.5);
   return shuffledCards;
-};
+}
 
 /*
 * Generates the HTML for the cards
@@ -52,18 +52,18 @@ function generateCards () {
     // Attach the img src to the card
     cardFrontImg.src = cards[i].imgSrc;
     // Add the name of the card
-    card.setAttribute('data-name', cards[i].name);
+    card.setAttribute("data-name", cards[i].name);
     // Attach the cards to Game Board
     gameBoard.appendChild(card);
     card.appendChild(cardFrontImg);
     card.appendChild(cardBack);
     // Adding Classes
-    card.classList.add('card');
-    cardFrontImg.classList.add('front');
-    cardBack.classList.add('back');
+    card.classList.add("card");
+    cardFrontImg.classList.add("front");
+    cardBack.classList.add("back");
     // Add Click Event on the card
-    card.addEventListener('click', (e) => {
-      card.classList.toggle('flip');
+    card.addEventListener("click", (e) => {
+      card.classList.toggle("flip");
       clickedCards(e);
     });
   }
@@ -89,10 +89,10 @@ function resetGame() {
 * Starts a new game
 */
 function newGame () {
-  const matchedCards = document.getElementsByClassName('matched');
+  const matchedCards = document.getElementsByClassName("matched");
   if (matchedCards.length > 0) {
     for (let i = 0; i < matchedCards.length; i++) {
-      matchedCards[i].classList.remove('flip');
+      matchedCards[i].classList.remove("flip");
     }
     setTimeout(resetGame, 2000);
   } else {
@@ -116,18 +116,18 @@ function clickedCards (e) {
 */
 function checkCards () {
   // Storing the flipped cards
-  const flippedCards = document.querySelectorAll('.flipped');
+  const flippedCards = document.querySelectorAll(".flipped");
 
   if (flippedCards.length === 2) {
-    const flippedCard1 = flippedCards[0].getAttribute('data-name');
-    const flippedCard2 = flippedCards[1].getAttribute('data-name');
+    const flippedCard1 = flippedCards[0].getAttribute("data-name");
+    const flippedCard2 = flippedCards[1].getAttribute("data-name");
     // If the cards match
     if (flippedCard1 === flippedCard2) {
       flippedCards.forEach(matchedCard);
 
       function matchedCard (matched) {
-        matched.classList.remove('flipped');
-        matched.classList.add('matched');
+        matched.classList.remove("flipped");
+        matched.classList.add("matched");
       };
       addPoints();
       addTurns();
@@ -137,8 +137,8 @@ function checkCards () {
       flippedCards.forEach(notMatchedCard);
 
       function notMatchedCard (unmatched) {
-        unmatched.classList.remove('flipped');
-        setTimeout(() => unmatched.classList.remove('flip'), 700);
+        unmatched.classList.remove("flipped");
+        setTimeout(() => unmatched.classList.remove("flip"), 700);
       };
       addTurns();
     }
@@ -165,9 +165,13 @@ function addTurns () {
 * Display Congratulation message when the player completes the game
 */
 function win () {
-  const matchedCards = document.querySelectorAll('.matched');
+  const matchedCards = document.querySelectorAll(".matched");
   if (matchedCards.length === 12) {
-    setTimeout(() => gameBoard.innerHTML = `<div class="winMessage"><div class="winMessageText">🎉 Contratulations! 🎊</div></div>`, 700);
+    setTimeout(() => gameBoard.innerHTML = `
+    <div class="winMessage">
+    <div class="winMessageText">
+    🎉 Contratulations! 🎊
+    </div></div>`, 700);
   }
 }
 
