@@ -170,3 +170,23 @@ header h1 {
     flex: 1;
   }
 }
+
+/* Devices 768px and larger */
+@media (min-width: 768px) {
+  main {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  #gameBoard {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .winMessage {
+    grid-column: span 4;
+  }
+
+  .winMessageText {
+    font-size: 3rem;
+  }
+}
