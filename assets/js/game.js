@@ -183,7 +183,7 @@ function win () {
     setTimeout(() => gameBoard.innerHTML = `
     <div class="winMessage">
     <div class="winMessageText">
-    🎉 Contratulations! 🎊
+    🎉 Congratulations! 🎊
     </div></div>`, 700);
   }
 }
