@@ -173,6 +173,12 @@ After adding the alt attributes
 
 [Back to the top](#table-of-contents)
 
+#### Second test
+
+After adding the instructions to footer, I ran another test, and the results were the same for Mobile and Desktop
+
+![PageSeed Test](/assets/readme/testing/pi-test-2-results.png)
+
 ## Credits
 
 - Favicon Image
