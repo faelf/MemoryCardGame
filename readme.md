@@ -46,6 +46,10 @@ This webpage was developed for the Milestone 2, where I have developed a memory 
 
 ### Existing features
 
+- Instructions panel
+
+![Instructions](/assets/readme/features/instructions.png)
+
 - Cards with flipping effect
 
 ![Gameboard](/assets/readme/features/game-board.png)
