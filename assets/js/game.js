@@ -18,36 +18,24 @@ let gameStats = {
 
 // Storing the cards
 const cardFiles = [
-  { alt: "Zelda Echoes of Wisdom", id: 1,
-    imgSrc: "assets/images/zelda1.webp", name: "card1" },
-  { alt: "Zelda Twilight Princess", id: 2,
-    imgSrc: "assets/images/zelda2.webp", name: "card2" },
-  { alt: "Zelda a Link to the Past", id: 3,
-    imgSrc: "assets/images/zelda3.webp", name: "card3" },
-  { alt: "Zelda Link's Awakening", id: 4,
-    imgSrc: "assets/images/zelda4.webp", name: "card4" },
-  { alt: "Zelda Majora's Mask", id: 5,
-    imgSrc: "assets/images/zelda5.webp", name: "card5" },
-  { alt: "Zelda the Wind Waker", id: 6,
-    imgSrc: "assets/images/zelda6.webp", name: "card6" },
-  { alt: "Zelda Echoes of Wisdom", id: 7,
-    imgSrc: "assets/images/zelda1.webp", name: "card1" },
-  { alt: "Zelda Twilight Princess", id: 8,
-    imgSrc: "assets/images/zelda2.webp", name: "card2" },
-  { alt: "Zelda a Link to the Past", id: 9,
-    imgSrc: "assets/images/zelda3.webp", name: "card3" },
-  { alt: "Zelda Link's Awakening", id: 10,
-    imgSrc: "assets/images/zelda4.webp", name: "card4" },
-  { alt: "Zelda Majora's Mask", id: 11,
-    imgSrc: "assets/images/zelda5.webp", name: "card5" },
-  { alt: "Zelda the Wind Waker", id: 12,
-    imgSrc: "assets/images/zelda6.webp", name: "card6" }
+  {alt: "Zelda", id: 1, imgSrc: "assets/images/zelda1.webp", name: "card1"},
+  {alt: "Zelda", id: 2, imgSrc: "assets/images/zelda2.webp", name: "card2"},
+  {alt: "Zelda", id: 3, imgSrc: "assets/images/zelda3.webp", name: "card3"},
+  {alt: "Zelda", id: 4, imgSrc: "assets/images/zelda4.webp", name: "card4"},
+  {alt: "Zelda", id: 5, imgSrc: "assets/images/zelda5.webp", name: "card5"},
+  {alt: "Zelda", id: 6, imgSrc: "assets/images/zelda6.webp", name: "card6"},
+  {alt: "Zelda", id: 7, imgSrc: "assets/images/zelda1.webp", name: "card1"},
+  {alt: "Zelda", id: 8, imgSrc: "assets/images/zelda2.webp", name: "card2"},
+  {alt: "Zelda", id: 9, imgSrc: "assets/images/zelda3.webp", name: "card3"},
+  {alt: "Zelda", id: 10, imgSrc: "assets/images/zelda4.webp", name: "card4"},
+  {alt: "Zelda", id: 11, imgSrc: "assets/images/zelda5.webp", name: "card5"},
+  {alt: "Zelda", id: 12, imgSrc: "assets/images/zelda6.webp", name: "card6"}
 ];
 
 /*
 * Shuffle the cards
 */
-function shuffleCards () {
+function shuffleCards() {
   const shuffledCards = cardFiles.sort(() => Math.random() - 0.5);
   return shuffledCards;
 }
@@ -55,11 +43,13 @@ function shuffleCards () {
 /*
 * Generates the HTML for the cards
 */
-function generateCards () {
+function generateCards() {
   // Store the shuffled cards into a const
   const cards = shuffleCards();
   // Loop through the cards to generate each card HTML
-  for (let i = 0; i < cards.length; i++) {
+  let i = 0;
+  const cardsLength = cards.length;
+  while (i < cardsLength) {
     // Generate the HTML tag for individual card
     const card = document.createElement("div");
     const cardFrontImg = document.createElement("img");
@@ -78,10 +68,11 @@ function generateCards () {
     cardFrontImg.classList.add("front");
     cardBack.classList.add("back");
     // Add Click Event on the card
-    card.addEventListener("click", (e) => {
+    card.addEventListener("click", function (e) {
       card.classList.toggle("flip");
       clickedCards(e);
     });
+    i += 1;
   }
 }
 
@@ -104,33 +95,46 @@ function resetGame() {
 /*
 * Starts a new game
 */
-function newGame () {
+function newGame() {
   const matchedCards = document.getElementsByClassName("matched");
-  if (matchedCards.length > 0) {
-    for (let i = 0; i < matchedCards.length; i++) {
+  const matchedCardsLength = matchedCards.length;
+  if (matchedCardsLength > 0) {
+    let i = 0;
+    while (i < matchedCardsLength) {
       matchedCards[i].classList.remove("flip");
+      i += 1;
     }
     setTimeout(resetGame, 350);
   } else {
     resetGame();
-  };
-};
+  }
+}
 
 /*
 * Mark the clicked cards as flipped
 */
-function clickedCards (e) {
+function clickedCards(e) {
   // Storing the clicked card
   const clickedCard = e.target;
   // Adding flipped class to the clicked cards
-  clickedCard.classList.add("flipped")
+  clickedCard.classList.add("flipped");
   checkCards();
-};
+}
 
 /*
 * Check if the flipped cards match
 */
-function checkCards () {
+function matchedCard(matched) {
+  matched.classList.remove("flipped");
+  matched.classList.add("matched");
+}
+
+function notMatchedCard(unmatched) {
+  unmatched.classList.remove("flipped");
+  setTimeout(() => unmatched.classList.remove("flip"), 700);
+}
+
+function checkCards() {
   // Storing the flipped cards
   const flippedCards = document.querySelectorAll(".flipped");
 
@@ -140,71 +144,63 @@ function checkCards () {
     // If the cards match
     if (flippedCard1 === flippedCard2) {
       flippedCards.forEach(matchedCard);
-
-      function matchedCard (matched) {
-        matched.classList.remove("flipped");
-        matched.classList.add("matched");
-      };
       addPoints();
       addTurns();
       win();
     // If the cards do not match
     } else {
       flippedCards.forEach(notMatchedCard);
-
-      function notMatchedCard (unmatched) {
-        unmatched.classList.remove("flipped");
-        setTimeout(() => unmatched.classList.remove("flip"), 700);
-      };
       addTurns();
     }
   }
-};
+}
 
 /*
 * Add points to game stats and updates display
 */
-function addPoints () {
-  gameStats.points++;
+function addPoints() {
+  gameStats.points += 1;
   pointsCount.textContent = gameStats.points;
-};
+}
 
 /*
 * Add turns to game stats and updates display
 */
-function addTurns () {
-  gameStats.turns++;
+function addTurns() {
+  gameStats.turns += 1;
   turnsCount.textContent = gameStats.turns;
-};
+}
 
 /*
 * Display Congratulation message when the player completes the game
 */
-function win () {
+function win() {
   const matchedCards = document.querySelectorAll(".matched");
   if (matchedCards.length === 12) {
-    setTimeout(() => gameBoard.innerHTML = `
-    <div class="winMessage">
-    <div class="winMessageText">
-    🎉 Congratulations! 🎊
-    </div></div>`, 700);
+    setTimeout(function () {
+      gameBoard.innerHTML =
+      `<div class="winMessage">
+      <div class="winMessageText">
+      🎉 Congratulations! 🎊
+      </div></div>`;
+    }, 700);
   }
 }
 
 /*
 * Open instructions modal
 */
-function openInstructions () {
+function openInstructions() {
   howtoplay.showModal();
 }
 
-function closeInstructions () {
+function closeInstructions() {
   howtoplay.close();
 }
 
-openInstructionsBtn.addEventListener('click', openInstructions);
+openInstructionsBtn.addEventListener("click", openInstructions);
 
-closeInstructionsBtn.addEventListener('click', closeInstructions);
+closeInstructionsBtn.addEventListener("click", closeInstructions);
 
 /*
 * Run the newGame function when the page is loaded
