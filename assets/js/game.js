@@ -107,7 +107,7 @@ function newGame () {
     for (let i = 0; i < matchedCards.length; i++) {
       matchedCards[i].classList.remove("flip");
     }
-    setTimeout(resetGame, 2000);
+    setTimeout(resetGame, 350);
   } else {
     resetGame();
   };
