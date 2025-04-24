@@ -145,6 +145,12 @@ This was the result after correcting the warnings
 ![JavaScript](/assets/readme/testing/jslintWarnings3.png)
 ![JavaScript](/assets/readme/testing/jslintWarnings4.png)
 
+- These were the options I used to get a 0 warnings
+
+![JavaScript](/assets/readme/testing/jslint-options.png)
+![JavaScript](/assets/readme/testing/jslint-clear.png)
+
+
 - [PageSpeed Insights](https://pagespeed.web.dev/)
 
 #### Mobile
