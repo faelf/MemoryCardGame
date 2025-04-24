@@ -86,13 +86,13 @@ This webpage was developed for the Milestone 2, where I have developed a memory 
 
 ## Technologies used
 
-### Lanuages used
+### Languages used
 
 - HTML
 - CSS
 - JavaScript
 
-### Frameworks, libraries, & programes used
+### Frameworks, libraries, & programs used
 
 - Favicons - [realfavicongenerator](https://realfavicongenerator.net/)
 - Wireframes - [Balsamiq](https://balsamiq.com/)
