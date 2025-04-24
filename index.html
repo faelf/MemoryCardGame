@@ -40,7 +40,31 @@
 
   <!-- Footer -->
   <footer>
-    <p>More features to be added.</p>
+    <div class="container">
+      <div id="gameInstructions">
+        <p id="openInstructionsBtn">Instructions</p>
+
+        <!-- Modal with instructions -->
+        <dialog id="howtoplay">
+          <h2>How to play:</h2>
+          <ul>
+            <li>All cards are laid face down on the board.</li>
+            <li>Click on any two cards to flip them over and reveal their images.</li>
+            <li>If the cards match, they stay face up and you earn a point.</li>
+            <li>If they do not match, they will flip back over after a short delay.</li>
+            <li>Keep flipping two cards at a time until all pairs have been matched.</li>
+            <li>The game ends when all the card pairs are found. Try to match them all in the fewest number of attempts!</li>
+          </ul>
+          <p id="closeInstructionsBtn">Close</p>
+        </dialog>
+      </div>
+
+      <!-- Message for future updates -->
+      <div id="footerNotes">
+        <h2>Stay tuned!</h2>
+        <p>More features to be added.</p>
+      </div>
+    </div>
   </footer>
 
   <!-- Game Java Script -->

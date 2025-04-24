@@ -24,6 +24,10 @@ body {
   flex-direction: column;
 }
 
+main {
+  margin-bottom: 10px;
+}
+
 /* Header */
 header {
   background-color: var(--color1);
@@ -169,15 +173,74 @@ header h1 {
 footer {
   margin-top: auto;
   background-color: var(--color1);
-  padding: 15px;
+  padding: 10px;
   border-top: 5px solid var(--color2);
   font-family: var(--FontText);
   color: var(--color3);
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+footer h2 {
+  font-weight: 550;
+}
+
+#openInstructionsBtn, #closeInstructionsBtn {
   text-align: center;
+  margin: 15px auto;
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background-color: var(--color3);
+  color: var(--color1);
+  font-family: var(--FontText);
+  font-weight: 500;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+dialog {
+  margin: auto;
+  width: 230px;
+  padding: 20px;
+  border: var(--color1);
+  border-radius: 20px;
+  background-color: var(--color1);
+  color: var(--color3);
+  box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
+}
+
+dialog::backdrop {
+  background-color: var(--color2);
+}
+
+footer ul {
+  list-style-position: inside;
+}
+
+footer ul li {
+  padding: 5px;
+  border-bottom: 2px solid var(--color2);
+}
+
+footer ul li:last-child {
+  border: none;
+}
+
+#gameInstructions, #footerNotes {
+  padding: 10px;
 }
 
 /* Devices 400px and larger */
 @media (min-width: 400px) {
+  footer .container {
+    flex-direction: row;
+  }
+
   #gameStats {
     width: 90%;
   }
@@ -190,6 +253,10 @@ footer {
 
 /* Devices 768px and larger */
 @media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+
   main {
     width: 768px;
     margin: 0 auto;
@@ -206,14 +273,51 @@ footer {
   .winMessageText {
     font-size: 3rem;
   }
+
+  dialog {
+    width: 500px;
+  }
+
+  dialog li {
+    font-size: 1.5rem;
+  }
+
+  #gameInstructions {
+    width: 350px;
+  }
+
+  #footerNotes {
+    width: 350px;
+  }
+
+  footer h2 {
+    font-size: 1.8rem;
+  }
+
+  footer p {
+    font-size: 1.5rem;
+  }
+
+  #openInstructionsBtn, #closeInstructionsBtn {
+    padding: 10px 15px;
+    font-size: 1.5rem;
+  }
 }
 
 /* Devices 1024px and larger */
 @media (min-width: 1024px) {
+  .container {
+    width: 1024px;
+  }
+
   main {
     width: 1024px;
     margin: 10px auto;
     display: flex;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
   }
 
   #gameStats {
@@ -263,5 +367,21 @@ footer {
 
   .winMessageText {
     font-size: 3rem;
+  }
+
+  dialog {
+    width: 600px;
+  }
+
+  dialog li {
+    font-size: 2rem;
+  }
+
+  #gameInstructions {
+    width: 500px;
+  }
+
+  #footerNotes {
+    width: 500px;
   }
 }

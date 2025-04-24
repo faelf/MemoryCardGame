@@ -6,6 +6,9 @@
 const gameBoard = document.getElementById("gameBoard");
 const turnsCount = document.getElementById("turns");
 const pointsCount = document.getElementById("points");
+const openInstructionsBtn = document.getElementById("openInstructionsBtn");
+const closeInstructionsBtn = document.getElementById("closeInstructionsBtn");
+const howtoplay = document.getElementById("howtoplay");
 
 // Game Stats
 let gameStats = {
@@ -187,6 +190,21 @@ function win () {
     </div></div>`, 700);
   }
 }
+
+/*
+* Open instructions modal
+*/
+function openInstructions () {
+  howtoplay.showModal();
+}
+
+function closeInstructions () {
+  howtoplay.close();
+}
+
+openInstructionsBtn.addEventListener('click', openInstructions);
+
+closeInstructionsBtn.addEventListener('click', closeInstructions);
 
 /*
 * Run the newGame function when the page is loaded
