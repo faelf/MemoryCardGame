@@ -126,6 +126,11 @@ This webpage was developed for the Milestone 2, where I have developed a memory 
 
 ## Testing
 
+User testing (manual testing) means a person checks the website by using it like the user, clicking buttons, testing all of the logic.
+
+Automated testing uses code to run tests automatically. And Test-Driven Development (TDD) is when tests are written first, before the code. Then build the code to pass those tests.
+Manual testing was used in this project, I first wrote the code, then I saw the result, and fixed problems when they appeared.
+
 - [Markup Validation Service](https://validator.w3.org/#validate_by_input)
 
 ![HTML](/assets/readme/testing/html.png)
@@ -145,7 +150,7 @@ This was the result after correcting the warnings
 ![JavaScript](/assets/readme/testing/jslintWarnings3.png)
 ![JavaScript](/assets/readme/testing/jslintWarnings4.png)
 
-- These were the options I used to get a 0 warnings
+These were the options I used to get a 0 warnings
 
 ![JavaScript](/assets/readme/testing/jslint-options.png)
 ![JavaScript](/assets/readme/testing/jslint-clear.png)
@@ -181,18 +186,17 @@ After adding the instructions to footer, I ran another test, and the results wer
 
 ## Credits
 
-- Favicon Image
-
-https://www.svgrepo.com/svg/236400/game-console-gamer
-
-- Card images
-
-https://www.ign.com/games/the-legend-of-zelda-majoras-mask
-https://www.ign.com/games/the-legend-of-zelda-a-link-to-the-past
-https://www.ign.com/games/the-legend-of-zelda-the-wind-waker
-https://www.ign.com/games/the-legend-of-zelda-twilight-princess
-https://www.ign.com/games/the-legend-of-zelda-links-awakening
-https://www.ign.com/games/the-legend-of-zelda-echoes-of-wisdom
-https://www.reddit.com/r/zelda/comments/1d3jree/oot_what_is_the_ocarina_of_time_made_of/
+- **Favicon Image**
+- https://www.svgrepo.com/svg/236400/game-console-gamer
+- **Card images**
+- https://www.ign.com/games/the-legend-of-zelda-majoras-mask
+- https://www.ign.com/games/the-legend-of-zelda-a-link-to-the-past
+- https://www.ign.com/games/the-legend-of-zelda-the-wind-waker
+- https://www.ign.com/games/the-legend-of-zelda-twilight-princess
+- https://www.ign.com/games/the-legend-of-zelda-links-awakening
+- https://www.ign.com/games/the-legend-of-zelda-echoes-of-wisdom
+- https://www.reddit.com/r/zelda/comments/1d3jree/-oot_what_is_the_ocarina_of_time_made_of/
+- **Modal Popup**
+- https://www.youtube.com/watch?v=TAB_v6yBXIE&t=260s
 
 [Back to the top](#table-of-contents)
