@@ -8,13 +8,14 @@ This webpage was developed for the Milestone 2, where I have developed a memory 
 
 1. [User stories](#user-stories)
 2. [Wireframes](#wireframes)
-3. [Features](#features)  
-3.1 [Existing features](#existing-features)  
-3.2 [Features left to implement](#features-left-to-implement)
-4. [Technologies used](#technologies-used)
-5. [Deployment](#deployment)
-6. [Testing](#testing)
-7. [Credits](#credits)
+3. [UX](#UX)
+4. [Features](#features)  
+4.1 [Existing features](#existing-features)  
+4.2 [Features left to implement](#features-left-to-implement)
+5. [Technologies used](#technologies-used)
+6. [Deployment](#deployment)
+7. [Testing](#testing)
+8. [Credits](#credits)
 
 ## User stories
 
@@ -39,6 +40,26 @@ This webpage was developed for the Milestone 2, where I have developed a memory 
 
 ### Desktop
 ![Desktop wireframes](/assets/readme/wireframes/Desktop.png)
+
+[Back to the top](#table-of-contents)
+
+## UX
+
+### Colour Palettes
+
+![Colour Palette](assets/readme/colour_palette.png)
+
+The colours I have chosen for the webpage were based on the Twilight Princess game. And for the Score Display, I went for a more retro looking, a black background and green fonts, trying to imitate a screen.
+
+### Readability & Accessibility
+I used [webaim](https://webaim.org/resources/contrastchecker/) to check the font colour contrast for accessibility
+
+### Typography
+For the title of the page, I went for [Overlock SC](https://fonts.google.com/specimen/Overlock+SC), as it looked like a font used in the game.
+
+The Score Display, I wanted something more retro, and the [Silkscreen](https://fonts.google.com/specimen/Silkscreen) is pixelated.
+
+For regular text, I went for a curvy font [Fredoka](https://fonts.google.com/specimen/Fredoka).
 
 [Back to the top](#table-of-contents)
 
