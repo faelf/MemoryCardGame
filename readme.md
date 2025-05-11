@@ -67,27 +67,27 @@ For regular text, I went for a curvy font [Fredoka](https://fonts.google.com/spe
 
 ### Existing features
 
-- Instructions panel
+- Instructions panel, for players who do not know how to play.
 
 ![Instructions](/assets/readme/features/instructions.png)
 
-- Cards with flipping effect
+- Cards with flipping effect. It gives a nice feedback to the player when selecting the card.
 
 ![Gameboard](/assets/readme/features/game-board.png)
 
-- Turn counter
+- Turn counter, so the player knows how many turns has taken, and in the future, it will be recorded.
 
 ![Turns](/assets/readme/features/turns-counter.png)
 
-- Matched cards counter
+- Matched cards counter, so the player knows how many correct matches.
 
 ![Points](/assets/readme/features/points-counter.png)
 
-- Button to reset the game
+- Button to reset the game, if the player is not happy with the game stats and wants to try again.
 
 ![New game button](/assets/readme/features/newgame-btn.png)
 
-- Congratulation message when completing the game
+- Congratulation message when completing the game, later I want to add best scores to this screen so the player can compare performances.
 
 ![Win message](/assets/readme/features/win-message.png)
 
@@ -117,6 +117,11 @@ For regular text, I went for a curvy font [Fredoka](https://fonts.google.com/spe
 
 - Favicons - [realfavicongenerator](https://realfavicongenerator.net/)
 - Wireframes - [Balsamiq](https://balsamiq.com/)
+- Contrast Checker - [Webaim](https://webaim.org/resources/contrastchecker/)
+- Colour palette - [Coolors](https://coolors.co/)
+- Fonts - [Google Fonts](https://fonts.google.com/)
+- Coding - [VS Code](https://code.visualstudio.com/)
+
 
 [Back to the top](#table-of-contents)
 
@@ -150,7 +155,8 @@ For regular text, I went for a curvy font [Fredoka](https://fonts.google.com/spe
 User testing (manual testing) means a person checks the website by using it like the user, clicking buttons, testing all of the logic.
 
 Automated testing uses code to run tests automatically. And Test-Driven Development (TDD) is when tests are written first, before the code. Then build the code to pass those tests.
-Manual testing was used in this project, I first wrote the code, then I saw the result, and fixed problems when they appeared.
+
+Manual testing was used in this project, I first wrote the code, then I saw the result, and fixed problems when they appeared. It was easier for me to write the code and test its functionality using console.log than using [Jest](https://jestjs.io/).
 
 - [Markup Validation Service](https://validator.w3.org/#validate_by_input)
 
