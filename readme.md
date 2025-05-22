@@ -162,6 +162,10 @@ Manual testing was used in this project, I first wrote the code, then I saw the 
 
 ![HTML](/assets/readme/testing/html.png)
 
+The trailing slash on void elements errors, I did not know what that meant, so I googled this error, and found out the closing / was not needed, so I removed them.
+
+And to fix the lack of heading, I changed the section tags into div.
+
 This was the result after correcting the warnings
 
 ![HTML](/assets/readme/testing/html2.png)
@@ -176,6 +180,21 @@ This was the result after correcting the warnings
 ![JavaScript](/assets/readme/testing/jslintWarnings2.png)
 ![JavaScript](/assets/readme/testing/jslintWarnings3.png)
 ![JavaScript](/assets/readme/testing/jslintWarnings4.png)
+
+The problems highlighted by JSLint were at first simple to fix by following the suggestions provided. But after resolving the first set of issues and then running the tool again, new warnings appeared.
+
+One error that proved difficult to correct was the 80-character line length, specifically on line 20 where I stored the card images. The issue was with the alt attributes, which contained game names. I attempted to break the line in numerous ways, but JSLint would say that the order of object properties were incorrect. Finally, I shortened the alt names to just Zelda, so that the entire line would be short enough for the 80-character limit.
+
+![JSline20](/assets/readme/testing/js_file_line20.png)
+
+JSlint also told me to replace the For loops, so I changed them to while loops.
+
+![JSlintLoops](/assets/readme/testing/jslint_for_loops.png)
+
+The two errors below, on the day I was fixing the warnings I had a session with my mentor, Rory, and he helped me saying that I could just tick the broswer and indent2 options to fix the errors below.
+
+![JSlintDocument](/assets/readme/testing/jslint_undeclared_document..png)
+![JSLintColumn](/assets/readme/testing/jslint_column_error.png)
 
 These were the options I used to get a 0 warnings
 
