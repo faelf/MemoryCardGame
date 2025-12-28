@@ -1,5 +1,5 @@
 /*
-* Memory Card Game with Zelda Cards
+  Memory Card Game with Zelda Cards
 */
 
 // Getting HTML info
@@ -13,27 +13,27 @@ const howtoplay = document.getElementById("howtoplay");
 // Game Stats
 let gameStats = {
   points: 0,
-  turns: 0
+  turns: 0,
 };
 
 // Storing the cards
 const cardFiles = [
-  {alt: "Zelda", id: 1, imgSrc: "assets/images/zelda1.webp", name: "card1"},
-  {alt: "Zelda", id: 2, imgSrc: "assets/images/zelda2.webp", name: "card2"},
-  {alt: "Zelda", id: 3, imgSrc: "assets/images/zelda3.webp", name: "card3"},
-  {alt: "Zelda", id: 4, imgSrc: "assets/images/zelda4.webp", name: "card4"},
-  {alt: "Zelda", id: 5, imgSrc: "assets/images/zelda5.webp", name: "card5"},
-  {alt: "Zelda", id: 6, imgSrc: "assets/images/zelda6.webp", name: "card6"},
-  {alt: "Zelda", id: 7, imgSrc: "assets/images/zelda1.webp", name: "card1"},
-  {alt: "Zelda", id: 8, imgSrc: "assets/images/zelda2.webp", name: "card2"},
-  {alt: "Zelda", id: 9, imgSrc: "assets/images/zelda3.webp", name: "card3"},
-  {alt: "Zelda", id: 10, imgSrc: "assets/images/zelda4.webp", name: "card4"},
-  {alt: "Zelda", id: 11, imgSrc: "assets/images/zelda5.webp", name: "card5"},
-  {alt: "Zelda", id: 12, imgSrc: "assets/images/zelda6.webp", name: "card6"}
+  { alt: "Zelda", id: 1, imgSrc: "assets/images/zelda1.webp", name: "card1" },
+  { alt: "Zelda", id: 2, imgSrc: "assets/images/zelda2.webp", name: "card2" },
+  { alt: "Zelda", id: 3, imgSrc: "assets/images/zelda3.webp", name: "card3" },
+  { alt: "Zelda", id: 4, imgSrc: "assets/images/zelda4.webp", name: "card4" },
+  { alt: "Zelda", id: 5, imgSrc: "assets/images/zelda5.webp", name: "card5" },
+  { alt: "Zelda", id: 6, imgSrc: "assets/images/zelda6.webp", name: "card6" },
+  { alt: "Zelda", id: 7, imgSrc: "assets/images/zelda1.webp", name: "card1" },
+  { alt: "Zelda", id: 8, imgSrc: "assets/images/zelda2.webp", name: "card2" },
+  { alt: "Zelda", id: 9, imgSrc: "assets/images/zelda3.webp", name: "card3" },
+  { alt: "Zelda", id: 10, imgSrc: "assets/images/zelda4.webp", name: "card4" },
+  { alt: "Zelda", id: 11, imgSrc: "assets/images/zelda5.webp", name: "card5" },
+  { alt: "Zelda", id: 12, imgSrc: "assets/images/zelda6.webp", name: "card6" },
 ];
 
 /*
-* Shuffle the cards
+  Shuffle the cards
 */
 function shuffleCards() {
   const shuffledCards = cardFiles.sort(() => Math.random() - 0.5);
@@ -41,7 +41,7 @@ function shuffleCards() {
 }
 
 /*
-* Generates the HTML for the cards
+  Generates the HTML for the cards
 */
 function generateCards() {
   // Store the shuffled cards into a const
@@ -77,7 +77,7 @@ function generateCards() {
 }
 
 /*
-* Reset the HTML
+  Reset the HTML
 */
 function resetGame() {
   // Clear the HTML
@@ -93,7 +93,7 @@ function resetGame() {
 }
 
 /*
-* Starts a new game
+  Starts a new game
 */
 function newGame() {
   const matchedCards = document.getElementsByClassName("matched");
@@ -111,7 +111,7 @@ function newGame() {
 }
 
 /*
-* Mark the clicked cards as flipped
+  Mark the clicked cards as flipped
 */
 function clickedCards(e) {
   // Storing the clicked card
@@ -122,7 +122,7 @@ function clickedCards(e) {
 }
 
 /*
-* Check if the flipped cards match
+  Check if the flipped cards match
 */
 function matchedCard(matched) {
   matched.classList.remove("flipped");
@@ -147,7 +147,7 @@ function checkCards() {
       addPoints();
       addTurns();
       win();
-    // If the cards do not match
+      // If the cards do not match
     } else {
       flippedCards.forEach(notMatchedCard);
       addTurns();
@@ -156,7 +156,7 @@ function checkCards() {
 }
 
 /*
-* Add points to game stats and updates display
+  Add points to game stats and updates display
 */
 function addPoints() {
   gameStats.points += 1;
@@ -164,7 +164,7 @@ function addPoints() {
 }
 
 /*
-* Add turns to game stats and updates display
+  Add turns to game stats and updates display
 */
 function addTurns() {
   gameStats.turns += 1;
@@ -172,23 +172,25 @@ function addTurns() {
 }
 
 /*
-* Display Congratulation message when the player completes the game
+  Display Congratulation message when the player completes the game
 */
 function win() {
   const matchedCards = document.querySelectorAll(".matched");
   if (matchedCards.length === 12) {
     setTimeout(function () {
-      gameBoard.innerHTML =
-      `<div class="winMessage">
-      <div class="winMessageText">
-      🎉 Congratulations! 🎊
-      </div></div>`;
+      gameBoard.innerHTML = /* html */ `
+      <div class="winMessage">
+        <div class="winMessageText">
+          🎉 Congratulations! 🎊
+        </div>
+      </div>
+      `;
     }, 700);
   }
 }
 
 /*
-* Open instructions modal
+  Open instructions modal
 */
 function openInstructions() {
   howtoplay.showModal();
@@ -203,6 +205,6 @@ openInstructionsBtn.addEventListener("click", openInstructions);
 closeInstructionsBtn.addEventListener("click", closeInstructions);
 
 /*
-* Run the newGame function when the page is loaded
+  Run the newGame function when the page is loaded
 */
 document.addEventListener("DOMContentLoaded", newGame);
