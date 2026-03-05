@@ -3,12 +3,13 @@
 */
 
 // Getting HTML info
-const gameBoard = document.getElementById("gameBoard");
+const gameBoard = document.getElementById("game-board");
 const turnsCount = document.getElementById("turns");
 const pointsCount = document.getElementById("points");
-const openInstructionsBtn = document.getElementById("openInstructionsBtn");
-const closeInstructionsBtn = document.getElementById("closeInstructionsBtn");
+const openInstructionsBtn = document.getElementById("instructions-open-btn");
+const closeInstructionsBtn = document.getElementById("close-button");
 const howtoplay = document.getElementById("howtoplay");
+const newGameBtn = document.querySelector("#new-game-btn");
 
 // Game Stats
 let gameStats = {
@@ -168,6 +169,7 @@ function addPoints() {
 */
 function addTurns() {
   gameStats.turns += 1;
+  console.log(gameStats);
   turnsCount.textContent = gameStats.turns;
 }
 
@@ -178,6 +180,7 @@ function win() {
   const matchedCards = document.querySelectorAll(".matched");
   if (matchedCards.length === 12) {
     setTimeout(function () {
+      console.log(gameStats);
       gameBoard.innerHTML = /* html */ `
       <div class="winMessage">
         <div class="winMessageText">
@@ -208,3 +211,5 @@ closeInstructionsBtn.addEventListener("click", closeInstructions);
   Run the newGame function when the page is loaded
 */
 document.addEventListener("DOMContentLoaded", newGame);
+
+newGameBtn.addEventListener("click", newGame);

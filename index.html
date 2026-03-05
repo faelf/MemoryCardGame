@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <!-- Same as header background color -->
@@ -18,56 +19,66 @@
   <title>Memory Card Game</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
   <!-- Header -->
-  <header>
+  <header id="main-header">
     <h1>Memory Card Game</h1>
   </header>
 
-  <!-- Main Content, Game Stats and Game Board -->
-  <main>
+  <!-- Game Stats and Buttons -->
+  <aside id="game-control" class="sidebar">
     <!-- Game Stats -->
-    <div id="gameStats">
-      <p>Turns <span id="turns">0</span></p>
-      <p>Points <span id="points">0</span></p>
-      <p class="newGameBtn" onclick="newGame()">NEW GAME</p>
+    <div class="stats-display">
+      <div class="stat">
+        <p>Turns <span id="turns">0</span></p>
+      </div>
+      <div class="stat">
+        <p>Points <span id="points">0</span></p>
+      </div>
     </div>
 
-    <!-- Game Board -->
-     <div id="gameBoard"></div>
+    <!-- Instructions Modal -->
+    <div id="instructions-open-btn" class="btn instructions" role="button">
+      Instructions
+    </div>
+
+    <!-- Modal with instructions -->
+    <dialog id="howtoplay">
+      <h2>How to play:</h2>
+      <ol>
+        <li>All cards are laid face down on the board.</li>
+        <li>Click on any two cards to flip them over and reveal their images.</li>
+        <li>If the cards match, they stay face up and you earn a point.</li>
+        <li>If they do not match, they will flip back over after a short delay.</li>
+        <li>Keep flipping two cards at a time until all pairs have been matched.</li>
+        <li>The game ends when all the card pairs are found. Try to match them all in the fewest number of attempts!</li>
+      </ol>
+      <button type="button" id="close-button" class="btn">Close</button>
+    </dialog>
+
+    <!-- New Game Button -->
+    <div id="new-game-btn" class="btn new-game" role="button">
+      New Game
+    </div>
+  </aside>
+
+  <!-- Game Board -->
+  <main id="game-board">
+    <!-- Injected with JS -->
   </main>
 
   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div id="gameInstructions">
-        <p id="openInstructionsBtn">Instructions</p>
-
-        <!-- Modal with instructions -->
-        <dialog id="howtoplay">
-          <h2>How to play:</h2>
-          <ul>
-            <li>All cards are laid face down on the board.</li>
-            <li>Click on any two cards to flip them over and reveal their images.</li>
-            <li>If the cards match, they stay face up and you earn a point.</li>
-            <li>If they do not match, they will flip back over after a short delay.</li>
-            <li>Keep flipping two cards at a time until all pairs have been matched.</li>
-            <li>The game ends when all the card pairs are found. Try to match them all in the fewest number of attempts!</li>
-          </ul>
-          <p id="closeInstructionsBtn">Close</p>
-        </dialog>
-      </div>
-
-      <!-- Message for future updates -->
-      <div id="footerNotes">
-        <h2>Stay tuned!</h2>
-        <p>More features to be added.</p>
-      </div>
+  <footer id="main-footer">
+    <div id="footer-notes">
+      <h2>Stay tuned!</h2>
+      <p>More features to be added.</p>
     </div>
   </footer>
 
   <!-- Game Java Script -->
   <script src="assets/js/game.js"></script>
 </body>
+
 </html>
