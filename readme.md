@@ -123,9 +123,9 @@ I used [webaim](https://webaim.org/resources/contrastchecker/) to check the font
 - Fonts - [Google Fonts](https://fonts.google.com/)
 - Coding - [VS Code](https://code.visualstudio.com/)
 
-### 🚀 Deployment
+## 🚀 Deployment
 
-### To deploy a page on GitHub follow the steps below:
+**To deploy a page on GitHub follow the steps below:**
 
 1. Create a public repository.
 2. Log into Github.
@@ -138,7 +138,7 @@ I used [webaim](https://webaim.org/resources/contrastchecker/) to check the font
 9. Save the changes, and the link to the deployed webpage should appear.
 10. This is the [link](https://faelf.github.io/MemoryCardGame/) to the live page.
 
-### To make a local copy follow the steps below:
+**To make a local copy follow the steps below:**
 
 1. Go to the Github Repository page.
 2. Find the CODE dropdown menu.
@@ -160,7 +160,9 @@ Manual testing was used in this project, I first wrote the code, then I saw the 
 
 - [Markup Validation Service](https://validator.w3.org/#validate_by_input)
 
-![HTML](/assets/readme/testing/html.png)
+<p align="center">
+  <img src="assets/readme/testing/html.png" alt="HTML" width="300">
+</p>
 
 The trailing slash on void elements errors, I did not know what that meant, so I googled this error, and found out the closing / was not needed, so I removed them.
 
@@ -168,66 +170,98 @@ And to fix the lack of heading, I changed the section tags into div.
 
 This was the result after correcting the warnings
 
-![HTML](/assets/readme/testing/html2.png)
+<p align="center">
+  <img src="assets/readme/testing/html2.png" alt="HTML" width="300">
+</p>
 
 - [CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)
 
-![CSS](/assets/readme/testing/css.png)
+<p align="center">
+  <img src="assets/readme/testing/css.png" alt="CSS" width="300">
+</p>
 
 - [JavaScript](https://www.jslint.com/)
 
-![JavaScript](/assets/readme/testing/jslint.png)
-![JavaScript](/assets/readme/testing/jslintWarnings2.png)
-![JavaScript](/assets/readme/testing/jslintWarnings3.png)
-![JavaScript](/assets/readme/testing/jslintWarnings4.png)
+<p align="center">
+  <img src="assets/readme/testing/jslint.png" alt="JavaScript" width="300">
+</p>
+<p align="center">
+  <img src="assets/readme/testing/jslintWarnings2.png" alt="JavaScript" width="300">
+</p>
+<p align="center">
+  <img src="assets/readme/testing/jslintWarnings3.png" alt="JavaScript" width="300">
+</p>
+<p align="center">
+  <img src="assets/readme/testing/jslintWarnings4.png" alt="JavaScript" width="300">
+</p>
 
 The problems highlighted by JSLint were at first simple to fix by following the suggestions provided. But after resolving the first set of issues and then running the tool again, new warnings appeared.
 
 One error that proved difficult to correct was the 80-character line length, specifically on line 20 where I stored the card images. The issue was with the alt attributes, which contained game names. I attempted to break the line in numerous ways, but JSLint would say that the order of object properties were incorrect. Finally, I shortened the alt names to just Zelda, so that the entire line would be short enough for the 80-character limit.
 
-![JSline20](/assets/readme/testing/js_file_line20.png)
+<p align="center">
+  <img src="assets/readme/testing/js_file_line20.png" alt="JSline20" width="300">
+</p>
 
 JSlint also told me to replace the For loops, so I changed them to while loops.
 
-![JSlintLoops](/assets/readme/testing/jslint_for_loops.png)
+<p align="center">
+  <img src="assets/readme/testing/jslint_for_loops.png" alt="JSlintLoops" width="300">
+</p>
 
 The two errors below, on the day I was fixing the warnings I had a session with my mentor, Rory, and he helped me saying that I could just tick the broswer and indent2 options to fix the errors below.
 
-![JSlintDocument](/assets/readme/testing/jslint_undeclared_document..png)
-![JSLintColumn](/assets/readme/testing/jslint_column_error.png)
+<p align="center">
+  <img src="assets/readme/testing/jslint_undeclared_document.png" alt="JSlintDocument" width="300">
+</p>
+<p align="center">
+  <img src="assets/readme/testing/jslint_column_error.png" alt="JSLintColumn" width="300">
+</p>
 
 These were the options I used to get a 0 warnings
 
-![JavaScript](/assets/readme/testing/jslint-options.png)
-![JavaScript](/assets/readme/testing/jslint-clear.png)
+<p align="center">
+  <img src="assets/readme/testing/jslint-options.png" alt="JavaScript" width="300">
+</p>
+<p align="center">
+  <img src="assets/readme/testing/jslint-clear.png" alt="JavaScript" width="300">
+</p>
 
 - [PageSpeed Insights](https://pagespeed.web.dev/)
 
-#### Mobile
+<p align="center">
+<strong>Mobile</strong><br>
+  <img src="assets/readme/testing/pi-mobile.png" alt="Mobile" width="300">
+</p>
 
-![Mobile](/assets/readme/testing/pi-mobile.png)
-
-#### Desktop
-
-![Desktop](/assets/readme/testing/pi-desktop.png)
+<p align="center">
+<strong>Desktop</strong><br>
+  <img src="assets/readme/testing/pi-desktop.png" alt="Desktop" width="300">
+</p>
 
 I had the same message on both for accessibility
 
-![Accessibility](/assets/readme/testing/pi-mobile-acc.png)
+<p align="center">
+  <img src="assets/readme/testing/pi-mobile-acc.png" alt="Accessibility" width="300">
+</p>
 
 After adding the alt attributes
 
-![Mobile](</assets/readme/testing/pi-mobile(2).png>)
+<p align="center">
+  <img src="assets/readme/testing/pi-mobile(2).png" alt="Mobile" width="300">
+</p>
 
-![Desktop](</assets/readme/testing/pi-desktop(2).png>)
+<p align="center">
+  <img src="assets/readme/testing/pi-desktop(2).png" alt="Desktop" width="300">
+</p>
 
-[Back to the top](#table-of-contents)
-
-#### Second test
+**Second test**
 
 After adding the instructions to footer, I ran another test, and the results were the same for Mobile and Desktop
 
-![PageSeed Test](/assets/readme/testing/pi-test-2-results.png)
+<p align="center">
+  <img src="assets/readme/testing/pi-test-2-results.png" alt="PageSeed Test" width="300">
+</p>
 
 ## 📜 Credits
 
