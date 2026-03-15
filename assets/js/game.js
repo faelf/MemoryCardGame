@@ -1,6 +1,4 @@
-/*
-  Memory Card Game with Zelda Cards
-*/
+import { scores } from "../js/scores.js";
 
 // Getting HTML info
 const gameBoard = document.getElementById("game-board");
@@ -169,7 +167,6 @@ function addPoints() {
 */
 function addTurns() {
   gameStats.turns += 1;
-  console.log(gameStats);
   turnsCount.textContent = gameStats.turns;
 }
 
@@ -180,7 +177,8 @@ function win() {
   const matchedCards = document.querySelectorAll(".matched");
   if (matchedCards.length === 12) {
     setTimeout(function () {
-      console.log(gameStats);
+      scores.add(gameStats);
+      displayScores();
       gameBoard.innerHTML = /* html */ `
       <div class="winMessage">
         <div class="winMessageText">
@@ -213,3 +211,19 @@ closeInstructionsBtn.addEventListener("click", closeInstructions);
 document.addEventListener("DOMContentLoaded", newGame);
 
 newGameBtn.addEventListener("click", newGame);
+
+/*
+  Display the scores
+*/
+function displayScores() {
+  scores.display({
+    table: document.querySelector("#scores-table"),
+    thead: {
+      points: "Points",
+      turns: "Turns",
+    },
+    tbody: scores.load(),
+  });
+}
+
+displayScores();

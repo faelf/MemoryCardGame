@@ -26,7 +26,6 @@
 }
 
 /* Reset */
-
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -38,6 +37,10 @@
 
 #game-control {
   grid-area: game-control;
+}
+
+#scores {
+  grid-area: scores;
 }
 
 #game-board {
@@ -52,7 +55,7 @@ body {
   font-family: var(--font-family-body);
   background: var(--light);
   display: grid;
-  grid-template-rows: auto auto auto 1fr;
+  grid-template-rows: auto auto 1fr auto auto;
   gap: var(--gap);
   max-width: 400px;
   min-height: 100svh;
@@ -64,6 +67,7 @@ body {
     "main-header"
     "game-control"
     "game-board"
+    "scores"
     "main-footer"
   ;
 }
@@ -105,7 +109,7 @@ ol, ul, li {
 }
 
 /* Header */
-header {
+header, #scores {
   padding: var(--gap);
   border-radius: var(--border-radius);
   background-color: var(--primary);
@@ -279,6 +283,7 @@ dialog::backdrop {
 /* Win Message */
 .winMessage {
   grid-column: span 3;
+  align-self: center;
   height: 300px;
   font-family: var(--font-family-body);
 }
@@ -289,6 +294,15 @@ dialog::backdrop {
   justify-content: center;
   height: 100%;
   font-size: 1.5rem;
+}
+
+#scores {
+  color: var(--light);
+}
+
+table {
+  width: 100%;
+  text-align: left;
 }
 
 /* Footer */
@@ -337,6 +351,7 @@ footer h2 {
 
   dialog {
     margin: auto;
+    width: 400px;
   }
 }
 
@@ -347,11 +362,12 @@ footer h2 {
   body {
     height: 100svh;
     grid-template-columns: 250px 1fr;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto auto 1fr auto;
     max-width: 1200px;
     grid-template-areas:
       "main-header main-header"
       "game-control game-board"
+      "scores game-board"
       "main-footer main-footer"
     ;
   }

@@ -23,19 +23,19 @@
 <body>
 
   <!-- Header -->
-  <header id="main-header">
+  <header id="main-header" aria-label="Page Logo">
     <h1>Memory Card Game</h1>
   </header>
 
   <!-- Game Stats and Buttons -->
-  <aside id="game-control" class="sidebar">
+  <section id="game-control" class="sidebar" aria-label="Game Controls and Statistics">
     <!-- Game Stats -->
     <div class="stats-display">
       <div class="stat">
-        <p>Turns <span id="turns">0</span></p>
+        <p aria-label="Turns">Turns <span id="turns">0</span></p>
       </div>
       <div class="stat">
-        <p>Points <span id="points">0</span></p>
+        <p aria-label="Points">Points <span id="points">0</span></p>
       </div>
     </div>
 
@@ -62,10 +62,18 @@
     <div id="new-game-btn" class="btn new-game" role="button">
       New Game
     </div>
-  </aside>
+  </section>
+
+  <section id="scores" aria-label="Latest scores">
+    <h3>Scores</h3>
+    <p>This will display the 10 latest scores.</p>
+    <table id="scores-table">
+      <!-- Injected by JS -->
+    </table>
+  </section>
 
   <!-- Game Board -->
-  <main id="game-board">
+  <main id="game-board" aria-label="Cards board">
     <!-- Injected with JS -->
   </main>
 
@@ -78,7 +86,7 @@
   </footer>
 
   <!-- Game Java Script -->
-  <script src="assets/js/game.js"></script>
+  <script type="module" src="assets/js/game.js"></script>
 </body>
 
 </html>
