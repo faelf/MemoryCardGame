@@ -323,6 +323,17 @@ footer h2 {
   font-weight: 600;
 }
 
+/* 404 Page */
+.page-not-found {
+  height: 100svh;
+  align-content: center;
+  text-align: center;
+}
+
+.page-not-found h1 {
+  margin-bottom: 30px;
+}
+
 /*
   Devices 768px and larger
 */
