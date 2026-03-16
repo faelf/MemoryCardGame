@@ -325,6 +325,7 @@ footer h2 {
 
 /* 404 Page */
 .page-not-found {
+  grid-column: 1 / -1;
   height: 100svh;
   align-content: center;
   text-align: center;
